@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>PAGINA EL TRIGAL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="contenido-header">
+        <div class="fondo" id="fondo">
+            <h1 class="texto"> EL TRIGAL</h1>
+
+        </div>
+    </div>
+
+    <nav class="menu">
+        <a href="#">Nosotros </a>
+        <a href="#">Servicios </a>
+        <a href="#">Contacto </a>
+    </nav>
+    <form action="/update/{{productos.0}}" method="post">
+        <input type="text" name="nompr" placeholder="nombre producto" value="{{productos.1}}">
+        <input type="text" name="preciopr" placeholder="precio producto" value="{{productos.2}}">
+        <input type="text" name="categoriapr" placeholder="categoria" value="{{productos.3}}">
+        <input type="text" name="fechaexppr" placeholder="fecha de expedicion" value="{{productos.4}}">
+        <button type="submit">Editar</button>
+    </form>
+    <br>
+
+    <br>
+    <script src="main.js"></script>
+</body>
+
+
+
+
+<STYLE TYPE="text/css" MEDIA=screen>
+    < ! * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    :root {
+        --blue: #0000FF;
+        --white: #FFFFFF;
+        --black: #000000;
+        --silver: #c0c0c0;
+        --gray-light: #eaeaea;
+
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    .contenido-header {
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://s3-us-west-2.amazonaws.com/wp-mpro-blog/wp-content/uploads/2018/10/13095309/s3-blog-punto-de-venta-abarrotes-01-min-min.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .contenido-header .fondo {
+        width: 100vw;
+        height: 100%;
+        max-width: 100%;
+        background-image: url(images/efecto.png);
+    }
+
+    .contenido-header .texto {
+        width: calc(100% - 20px);
+        height: 100vh;
+        font-size: 90px;
+        font-weight: 400;
+        font-family: 'Noto Serif', serif;
+        font-style: italic;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: blue;
+        mix-blend-mode: multiply;
+    }
+
+    .menu {
+        background-color: var(--blue);
+        width: 100%;
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        z-index: 999;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-family: 'Noto serif', serif;
+        font-style: italic;
+        margin-bottom: 60px;
+
+    }
+
+    .menu a {
+        display: inline-block;
+        padding: 10px 30px;
+        font-size: 26px;
+        background-color: var(--silver);
+        margin: 0 10px;
+        transition: .5s ease all;
+        color: var(--blue);
+        text-decoration: none;
+    }
+
+    .menu a:hover {
+        transform: translateY(18px);
+        background-color: var(--blue);
+    }
+
+    .nosotros {
+        margin-bottom: 60px;
+
+    }
+
+    .subtitulo {
+        font-size: 20px;
+        color: var(--blue);
+        font-family: 'Noto Serif', serif;
+        font-weight: 700;
+        z-index: 2;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+    .subtitulo span {
+        background-color: var(--gray-light);
+        padding: 0 15px;
+        z-index: 99;
+        position: relative;
+    }
+
+    .subtitulo::after {
+        content: "";
+        display: inline-block;
+        height: 2px;
+        width: 100%;
+        background: var(--blue);
+        position: relative;
+        top: -29px;
+        z-index: 1;
+
+    }
+
+    .nosotros .titulo {
+        width: 70%;
+        font-size: 44px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    .nosotros .enlace {
+        display: inline-block;
+        margin-top: 40px;
+        color: var(--blue);
+        font-weight: 700;
+        border-bottom: 1px solid transparent;
+        transition: .3s ease all;
+    }
+
+    .nosotros .enlace:hover {
+        text-decoration: none;
+        letter-spacing: 3px;
+        border-bottom: 1px solid var (--blue);
+    }
+
+    .productos {
+        background: var(--gray-light);
+        padding: 20px;
+        margin-bottom: 60px;
+    }
+
+    .nosotros .titulo {
+        width: 70%;
+        font-size: 44px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 50px;
+    }
+
+    .productos .producto {
+        position: relative;
+        width: 100%;
+    }
+
+    .productos .overlay {
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--blue);
+        overflow: hidden;
+        transition: .5s ease;
+
+    }
+
+    .productos .producto:hover .overlay {
+        width: 100%;
+        opacity: .8;
+
+
+    }
+
+    .productos .producto .overlay-texto {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        white-space: nowrap;
+        color: var(--white);
+        font-size: 18px;
+        transform: translate(-50%-50%);
+        overflow: hidden;
+        border-top: 1px solid #FFFFFF;
+        border-bottom: 1px solid #FFFFFF;
+    }
+
+    .productos .btn-productos {
+        background-color: var(--blue);
+        color: #FFFFFF;
+        padding: 7px 20px;
+        text-transform: uppercase;
+        font-size: 16px;
+        border: 2px solid transparent;
+        transition: .3s ease;
+
+    }
+
+    .productos .producto .btn-productos:hover {
+
+        background-color: transparent;
+        border: 2px solid var(--blue);
+        color: var(--blue);
+
+
+    }
+
+    </html>
